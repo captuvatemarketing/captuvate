@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Captuvate Marketing</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style-2.css">
+
+
+
+  <!-- =======================================================
+    Theme Name: Baker
+    Theme URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <div id="myDiv">
+    <!--HEADER-->
+    <div class="header">
+      <div class="bg-color">
+        <header id="main-header">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" width="150">
+              </a>
+              
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class=""><a href="index.html#main-header">Home</a></li>
+                  <li class=""><a href="index.html#feature">Services</a></li>
+                  <li class=""><a href="index.html#duo">About Us</a></li>
+                  <li class="active"><a href="index.html#works">Portfolio</a></li>
+                  <li class=""><a href="index.html#blog">Blog</a></li>
+                  <li class=""><a href="index.html#faq">FAQ</a></li>
+                  <li class=""><a href="testimonials.html">Testimonials</a></li> 
+                  <li class=""><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">      
+        <main class="container">
+          <section id="introduction">
+          
+      
+            <style>
+              .portfolio-item {
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 20px;
+                padding: 15px;
+                background: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+              }
+              .portfolio-item img {
+                width: 100%;
+                transition: transform .3s ease-in-out;
+                cursor: pointer;
+                border-radius: 8px;
+              }
+              .portfolio-item:hover img {
+                transform: scale(1.05);
+              }
+              .portfolio-item .details {
+                padding: 10px;
+                text-align: left;
+                font-size: 14px;
+              }
+              .portfolio-item figcaption {
+          padding: 15px;
+          text-align: center;
+        }
+              .portfolio-item .details h3 {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 5px;
+              }
+              .portfolio-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+              }
+              .lightbox {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+              }
+              .lightbox img {
+                max-width: 90%;
+                max-height: 90%;
+                position: relative;
+                display: block;
+                margin: auto;
+                z-index: 1001;
+                transition: none;
+              }
+              .lightbox:target {
+                visibility: visible;
+                opacity: 1;
+              }
+
+
+              .category-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .category-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .category-item {
+            padding: 10px 15px;
+            position: relative;
+            color: #333; /* Default text color */
+            text-decoration: none;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+        .category-item.active {
+            color: #198989; /* Active category color */
+            font-weight: bold; /* Make selected category bold */
+        }
+        .category-item.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: #198989; /* Active underline color */
+        }
+        
+        @media (max-width: 768px) {
+            .category-container {
+                gap: 5px;
+            }
+            .category-row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            .category-item {
+                display: block;
+                text-align: center;
+                width: 100%;
+                max-width: 250px;
+            }
+        
+        }
+            </style>
+            
+            <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
+              <div class="container">
+                <div class="row" style="margin-bottom:40px;">
+                  <div class="col-md-12 text-center">
+                    <h2 class="service-title pad-bt15">Creative Highlights</h2>
+                    <p class="sub-title pad-bt15">Welcome to Captuvate’s Creative Highlights, where strategy meets innovation! Here, you’ll find a showcase of our work across social media, website management, podcast production, email marketing, and more. Each project reflects our passion for creating content that not only looks great but also drives results.
+                    </p>
+                    <p class="sub-title pad-bt15">From eye-catching social media campaigns to seamless website experiences, we take pride in helping brands captivate their audience. Browse through our portfolio and see how we bring ideas to life!
+                    </p>
+                    <hr class="bottom-line">
+                    <div>
+                  
+                    <div class="category-container">
+                      <div class="category-row">
+                        <a href="creative-highlights-images.html" id="category-1" class="category-item active">Images</a>
+                        <a href="creative-highlights-carousels.html" id="category-2" class="category-item">Carousels</a>
+                        <a href="creative-highlights-reels.html" id="category-3" class="category-item">Reels/Tiktoks</a>
+                        <a href="creative-highlights-videos.html" id="category-5" class="category-item">Videos</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="creative-highlights-ebook.html" id="category-6" class="category-item">Ebook Covers</a>
+                        <a href="creative-highlights-infographics.html" id="category-7" class="category-item">Infographics</a>
+                        <a href="creative-highlights-podcast.html" id="category-8" class="category-item">Podcast Intro</a>
+                        <a href="creative-highlights-audiogram.html" id="category-9" class="category-item">Audiograms</a>
+                    </div>
+                  </div>
+                  </div>
+                  <br>
+                 </div>
+                  </div>
+                </div>
+                
+                <div class="portfolio-container">
+                  <div class="row" id="portfolio-items">
+
+
+                    <!--creative image 1 -->
+
+                    <div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+                      <a href='creative/captuvate-image-1.jpg'>
+                          <figure1>
+                              <img src='creative/captuvate-image-1.jpg' class="img-responsive">
+                             
+                          </figure1>
+                      </a>
+                  </div>
+                  
+                    <!-- creative image 1-->
+
+
+                   <!-- Creative Images -->
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-2.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-2.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-3.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-3.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-4.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-4.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-5.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-5.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-6.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-6.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-7.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-7.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-8.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-8.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-9.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-9.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-10.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-10.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-11.jpg'>
+      <figure1>
+          <img src='creative/captuvate-image-11.jpg' class='img-responsive'>
+      </figure1>
+  </a>
+</div>
+
+
+                    <!-- creative image 11-->
+
+
+               <!--creative image 12 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-12.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-12.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 12 -->
+
+<!--creative image 13 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-13.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-13.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 13 -->
+
+<!--creative image 14 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-14.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-14.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 14 -->
+
+<!--creative image 15 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-15.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-15.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 15 -->
+
+<!--creative image 19 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-19.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-19.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 19 -->
+
+<!--creative image 20 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-20.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-20.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 20 -->
+
+<!--creative image 21 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-21.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-21.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 21 -->
+
+<!--creative image 22 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-22.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-22.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 22 -->
+
+<!--creative image 23 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-23.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-23.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 23 -->
+
+<!--creative image 24 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-24.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-24.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 24 -->
+
+<!--creative image 25 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-25.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-25.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 25 -->
+
+<!--creative image 26 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-26.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-26.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 26 -->
+
+<!--creative image 27 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-27.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-27.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 27 -->
+
+<!--creative image 28 -->
+<div class='col-md-4 col-sm-6 col-xs-12 portfolio-item'>
+  <a href='creative/captuvate-image-28.jpg'>
+      <figure1>
+          <img src="creative/captuvate-image-28.jpg" class="img-responsive">
+      </figure1>
+  </a>
+</div>
+<!-- creative image 28 -->
+
+
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <div>
+              <a href='#portfolio' id='img1' class='lightbox'><img src='img/port01.jpg'></a>
+              <a href='#portfolio' id='img2' class='lightbox'><img src='img/port02.jpg'></a>
+              <a href='#portfolio' id='img3' class='lightbox'><img src='img/port03.jpg'></a>
+              <a href='#portfolio' id='img4' class='lightbox'><img src='img/port04.jpg'></a>
+              <a href='#portfolio' id='img5' class='lightbox'><img src='img/port05.jpg'></a>
+            </div>
+            
+
+
+
+        
+        
+          
+
+        <style>
+          main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+          }
+          section {
+            margin-bottom: 40px;
+          }
+          h1, h2 {
+            color: #118888;
+          }
+
+          h3 {
+            color: #ffffff;
+          }
+          button {
+            background-color: #118888;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #0d6d6d;
+          }
+          @media (max-width: 768px) {
+            main {
+              padding: 10px;
+            }
+            h1 {
+              font-size: 24px;
+            }
+            h2 {
+              font-size: 20px;
+            }
+            h3 {
+              font-size: 18px;
+            }
+          }
+        </style>
+        
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    
+    
+    <!---->
+    
+    <!---->
+    <!---->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-center">
+          <p>&copy; <strong>2025 . Captuvate. </strong>All Rights Reserved.</p>
+          
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Baker
+            -->
+            <p>Designed by <span style="color: #118888;"><strong>Captuvate</strong></span></p>
+
+          </div>
+        </div>
+    </footer>
+  
+    <!---->
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+</body>
+</html>
